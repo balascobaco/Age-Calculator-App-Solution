@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/fav-icon" href="assets\images\favicon-32x32.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="age-calculator.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+    <title>Age Calculator App</title>
+</head>
+<body>
+    <main>
+        <form>
+            
+            <div class="day-input">
+                <p id="day-title">day</p>        
+                <input id="day-input" type="number" placeholder="DD" min="0" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                <p class="error" id="error-day"></p>
+            </div>
+
+            <div class="month-input">
+                <p id="month-title">month</p>        
+                <input id="month-input" type="number" placeholder="MM" min="0"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                <p class="error" id="error-month"></p>
+            </div>
+
+            <div class="year">
+                <p id="year-title">year</p>        
+                <input id="year-input" type="number" placeholder="YYYY" min="0"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                <p class="error" id="error-year"></p>
+            </div>
+            
+        </form>
+        <div class="button-container">
+            <div id="line"></div>
+        <div>
+            <button onclick="ageCalculator()" >
+                <img src="assets\images\icon-arrow.svg" role="Arrow Image" alt="Click here to calculate your age">
+            </button>
+        </div>
+    </div>
+        
+        <div class="results">
+            <p><span id="years-result">--</span> years</p>
+        
+            <p><span id="months-result">--</span> months</p>
+        
+            <p><span id="days-result">--</span> days</p>
+        </div>
+    </main>
+</body>
+</html>
