@@ -214,6 +214,13 @@ function ageCalculator() {
     return;
   }
 
+  let maxDays = getDaysInMonth(month, year);
+  if (day > maxDays) {
+    errorDay.textContent = "Invalid day";
+    changeStyle("day-input", "day-title", "red");
+    return;
+  }
+
   // Calculate the age
   var ageYear = currentYear - year;
   var ageMonth = currentMonth - month;
